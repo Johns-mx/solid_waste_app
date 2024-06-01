@@ -3,16 +3,16 @@ import colors from './colors';
 
 const lightColor: iColorPallete = {
   background: colors.primary_bg,
-  text: colors.dark, // '#222428'
-  button: colors.primary_shade, // '#27ae60'
-  statusBar: colors.primary_shade,
+  text: colors.dark,
+  button: colors.bg_welcome_screen3,
+  statusBar: colors.primary_bg,
 };
 
 const darkColor: iColorPallete = {
-  background: colors.primary_seven,
-  text: colors.light, // '#F4F5F8'
-  button: colors.primary_shade, // '#27ae60'
-  statusBar: colors.primary_shade,
+  background: colors.dark_shade,
+  text: colors.light,
+  button: colors.bg_welcome_screen3,
+  statusBar: colors.dark_shade,
 };
 
 export const Colors: iColorsType = {

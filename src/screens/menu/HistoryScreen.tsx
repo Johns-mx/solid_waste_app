@@ -8,13 +8,20 @@ import {
 } from 'react-native';
 import React from 'react';
 import colors from '../../assets/colors/colors';
+import { useTheme } from '../../hooks/ThemeContext';
 
 const HistoryScreen = () => {
+  const { colorsTheme, isDarkMode } = useTheme();
+
   return (
-    <SafeAreaView style={styles.safeAreaView}>
+    <SafeAreaView
+      style={[
+        styles.safeAreaView,
+        { backgroundColor: colorsTheme.background },
+      ]}>
       {/* <StatusBar backgroundColor={colors.primary_shade} /> */}
       <View style={styles.screen}>
-        <Text>History</Text>
+        <Text style={{ color: colorsTheme.text }}>History</Text>
       </View>
     </SafeAreaView>
   );

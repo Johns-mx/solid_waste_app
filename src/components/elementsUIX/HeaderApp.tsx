@@ -41,7 +41,17 @@ const HeaderApp = ({ navigation, route, name }: HeaderAppProps) => {
             <Text style={[styles.textName, { color: colorsTheme.text }]}>
               {name ? name : 'Nombre de usuario'}
             </Text>
-            <Text style={{ color: colorsTheme.text }}>Administrador</Text>
+            <Text
+              style={{
+                color: colorsTheme.text,
+              }}>
+              <MaterialIcons
+                name="verified"
+                size={17}
+                color={colors.primary_five}
+              />{' '}
+              Administrador
+            </Text>
           </View>
         </View>
 
@@ -98,6 +108,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'center',
     marginHorizontal: 10,
+    //alignItems: 'center',
   },
   textName: {
     fontWeight: 'bold',

@@ -19,7 +19,7 @@ const MainTab = () => {
       initialRouteName="DashboardStack"
       screenOptions={{
         headerShown: true,
-        tabBarActiveTintColor: colors.primary_shade,
+        tabBarActiveTintColor: colors.bg_welcome_screen3,
         tabBarStyle: {
           position: 'absolute',
           bottom: 5,
@@ -46,7 +46,7 @@ const MainTab = () => {
         component={DashboardStack}
         options={{
           headerShown: false,
-          title: 'Dashboard',
+          title: 'DASHBOARD',
           tabBarLabel: 'Home',
           tabBarIcon: ({ focused, color, size }) => (
             <Icon
@@ -62,7 +62,7 @@ const MainTab = () => {
         component={MapScreen}
         options={{
           headerShown: false,
-          title: 'Map',
+          title: 'MAPA DE RUTAS',
           tabBarLabel: 'Routes Map',
           tabBarIcon: ({ focused, color, size }) => {
             return (
@@ -94,8 +94,8 @@ const MainTab = () => {
         component={HistoryScreen}
         options={{
           headerShown: true,
-          title: 'History',
-          tabBarLabel: 'History',
+          title: 'HISTORIAL',
+          tabBarLabel: 'Historial',
           tabBarIcon: ({ focused, color, size }) => (
             <MaterialCommIcon
               name={focused ? 'history' : 'history'}

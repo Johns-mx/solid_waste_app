@@ -2,6 +2,9 @@ export default {
   white: '#FFFFFF',
   black: '#000000',
 
+  dark_mode: '#2f3643',
+  light_mode: '#e2eaf2',
+
   // Primary colors
   primary: '#2ecc71',
   primary_note: '#D9FFE8',
@@ -19,6 +22,9 @@ export default {
   primary_bg: '#e9f3ef',
   primary_bg_tint: '#bfdecc',
   primary_bg_shade: '#8fb2a0',
+
+  login_input: '#dae5dd',
+  login_input_text: '#dae5dd',
 
   // Secondary colors
   secondary: '#3498db',
@@ -73,4 +79,10 @@ export default {
   black_disabled: '#0000005e',
   black_inactive: '#0000008a',
   surface: '#202020',
+
+  bg_welcome_screen1: '#4e9494',
+  bg_welcome_screen2: '#438d83',
+  bg_welcome_screen3: '#0f7d6b',
+  bg_welcome_screen4: '#055d4e',
+  bg_welcome_screen5: '#04352d',
 };

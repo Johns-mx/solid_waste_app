@@ -3,6 +3,8 @@ export interface iColorPallete {
   text: string;
   button: string;
   statusBar: string;
+  buttonText?: string;
+  icons?: string;
 }
 
 export interface iColorsType {

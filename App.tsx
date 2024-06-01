@@ -5,29 +5,35 @@
  * @format
  */
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   SafeAreaView,
   StatusBar,
   StyleSheet,
   useColorScheme,
 } from 'react-native';
-import { Colors } from 'react-native/Libraries/NewAppScreen';
 import MainNavigator from './src/stacks/MainStack';
-import colors from './src/assets/colors/colors';
+import { NavigationContainer } from '@react-navigation/native';
 import { ThemeProvider, useTheme } from './src/hooks/ThemeContext';
+import { PaperProvider } from 'react-native-paper';
+import { AuthProvider } from './src/contexts/AuthProvider';
+import colors from './src/assets/colors/colors';
 
-function App(): React.JSX.Element {
+function App() {
   const { isDarkMode, colorsTheme } = useTheme();
 
   return (
     <ThemeProvider>
       <SafeAreaView style={styles.safeAreaView}>
-        <StatusBar
-          barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-          backgroundColor={colorsTheme.background}
-        />
-        <MainNavigator />
+        <PaperProvider>
+          <StatusBar
+            barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+            backgroundColor={colorsTheme.background}
+          />
+          <AuthProvider>
+            <MainNavigator />
+          </AuthProvider>
+        </PaperProvider>
       </SafeAreaView>
     </ThemeProvider>
   );

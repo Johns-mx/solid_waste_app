@@ -4,23 +4,30 @@ import {
   Text,
   TouchableOpacity,
   View,
-} from 'react-native'
-import React from 'react'
-import colors from '../../assets/colors/colors'
-import { NativeStackScreenProps } from '@react-navigation/native-stack'
-import { DashboardStackProps } from '../../types/types'
+} from 'react-native';
+import React from 'react';
+import colors from '../../assets/colors/colors';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { DashboardStackProps } from '../../types/types';
+import { useTheme } from '../../hooks/ThemeContext';
 
-type LogoutProps = NativeStackScreenProps<DashboardStackProps, 'Logout'>
+type LogoutProps = NativeStackScreenProps<DashboardStackProps, 'Logout'>;
 
-const LogoutScreen = ({ navigation }: LogoutProps) => {
+const LogoutScreen = ({ navigation, route }: LogoutProps) => {
+  const { colorsTheme, isDarkMode } = useTheme();
+
   return (
-    <SafeAreaView style={styles.safeAreaView}>
+    <SafeAreaView
+      style={[
+        styles.safeAreaView,
+        { backgroundColor: colorsTheme.background },
+      ]}>
       <View style={styles.screen}>
-        <Text>Logout</Text>
+        <Text style={{ color: colorsTheme.text }}>Logout</Text>
       </View>
     </SafeAreaView>
-  )
-}
+  );
+};
 
 const styles = StyleSheet.create({
   safeAreaView: {
@@ -31,6 +38,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-})
+});
 
-export default LogoutScreen
+export default LogoutScreen;
